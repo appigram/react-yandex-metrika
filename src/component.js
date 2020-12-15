@@ -43,7 +43,7 @@ YMInitializer.propTypes = {
     containerElement: PropTypes.string,
     options: PropTypes.object,
     attrs: PropTypes.object,
-    version: PropTypes.oneOf(['1', '2'])
+    version: PropTypes.oneOf(['1', '2', '3'])
 };
 
 YMInitializer.defaultProps = {
