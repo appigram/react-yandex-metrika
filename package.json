@@ -1,35 +1,35 @@
 {
-  "name": "@appigram/react-yandex-metrika",
-  "version": "2.7.3",
-  "description": "Yandex Metrika(beta) component for React",
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/appigram/react-yandex-metrika"
-  },
-  "keywords": [
-    "react-component",
-    "react",
-    "yandex-metrika",
-    "component"
-  ],
-  "author": "Evgeny Sysmanov <appigram@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.26.0",
-    "eslint-plugin-react": "^7.23.2",
-    "prop-types": "^15.5.10",
-    "react": "^16.0.0"
-  },
-  "peerDependencies": {
-    "prop-types": "*",
-    "react": "*"
-  }
+    "name": "@appigram/react-yandex-metrika",
+    "version": "2.7.4",
+    "description": "Yandex Metrika(beta) component for React",
+    "main": "./lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/appigram/react-yandex-metrika"
+    },
+    "keywords": [
+        "react-component",
+        "react",
+        "yandex-metrika",
+        "component"
+    ],
+    "author": "Evgeny Sysmanov <appigram@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.14.8",
+        "@babel/core": "^7.15.0",
+        "@babel/preset-env": "^7.15.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-react": "^7.25.1",
+        "prop-types": "^15.5.10",
+        "react": "^16.0.0"
+    },
+    "peerDependencies": {
+        "prop-types": "*",
+        "react": "*"
+    }
 }
