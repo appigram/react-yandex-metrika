@@ -13,7 +13,7 @@ function YMInitializer({
     version = '1',
     children
 }) {
-    const [insertPoint, setInsertPoint] = useState()
+    const [insertPoint, setInsertPoint] = useState();
 
     useEffect(() => {
         init(accounts, options, version);
@@ -27,11 +27,11 @@ function YMInitializer({
             }
         });
         insertPoint.insertBefore(el, null);
-    }, [])
+    }, []);
 
     const handleSetInsertPoint = (element) => {
         setInsertPoint(element);
-    }
+    };
 
     return React.createElement(
         containerElement,

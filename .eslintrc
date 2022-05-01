@@ -1,5 +1,9 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+       "requireConfigFile": false
+    },
     "rules": {
         "curly": [2],
         "keyword-spacing": [2, {"before": true, "after": true}],
@@ -36,8 +40,5 @@
     },
     "env": {
         "node": true
-    },
-    "settings": {
-        "ecmascript6": true
     }
 }
