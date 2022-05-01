@@ -1,56 +1,43 @@
 /* eslint-env browser */
 'use strict';
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import init from './init';
 import { scriptPath } from './constants';
 
-class YMInitializer extends Component {
+function YMInitializer({
+    accounts = [],
+    containerElement = 'div',
+    options = {},
+    attrs = {},
+    version = '1',
+    children
+}) {
+    const [insertPoint, setInsertPoint] = useState()
 
-    componentDidMount() {
-        init(this.props.accounts, this.props.options, this.props.version);
+    useEffect(() => {
+        init(accounts, options, version);
         let el = document.createElement('script');
-        let attrs = this.props.attrs;
         el.type = 'text/javascript';
         el.async = true;
-        el.src = scriptPath(this.props.version);
+        el.src = scriptPath(version);
         Object.keys(attrs).map(i => {
             if (el.__proto__.hasOwnProperty(i)) {
                 el.setAttribute(i, attrs[i]);
             }
         });
-        this.insertPoint.insertBefore(el, null);
+        insertPoint.insertBefore(el, null);
+    }, [])
+
+    const handleSetInsertPoint = (element) => {
+        setInsertPoint(element);
     }
 
-    render() {
-        let setInsertPoint = (element) => {
-            this.insertPoint = element;
-        };
-        return React.createElement(
-            this.props.containerElement,
-            {ref: setInsertPoint},
-            this.props.children
-        );
-    }
-
+    return React.createElement(
+        containerElement,
+        { ref: handleSetInsertPoint },
+        children
+    );
 }
-
-YMInitializer.displayName = 'YMInitializer';
-
-YMInitializer.propTypes = {
-    accounts: PropTypes.arrayOf(PropTypes.number).isRequired,
-    containerElement: PropTypes.string,
-    options: PropTypes.object,
-    attrs: PropTypes.object,
-    version: PropTypes.oneOf(['1', '2', '3'])
-};
-
-YMInitializer.defaultProps = {
-    containerElement: 'div',
-    options: {},
-    attrs: {},
-    version: '1'
-};
 
 export { YMInitializer };

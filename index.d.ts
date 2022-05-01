@@ -1,14 +1,14 @@
-import {Component} from 'react';
+import {FunctionComponent} from 'react';
 
 interface YMInitializerProps {
     accounts: number[];
     containerElement?: string;
     options?: {[name: string]: any};
-    version?: '1' | '2';
+    version?: '1' | '2' | '3';
     attrs?: Record<string, string | number>;
 }
 
-export class YMInitializer extends Component<YMInitializerProps> {}
+export const YMInitializer: FunctionComponent<YMInitializerProps>
 
 declare const ym: (methodName: string, ...args: any[]) => void;
 
