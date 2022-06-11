@@ -26,8 +26,8 @@ function YMInitializer({
                 el.setAttribute(i, attrs[i]);
             }
         });
-        insertPoint.insertBefore(el, null);
-    }, []);
+        insertPoint?.insertBefore(el, null);
+    }, [insertPoint]);
 
     const handleSetInsertPoint = (element) => {
         setInsertPoint(element);
